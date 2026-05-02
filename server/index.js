@@ -67,5 +67,11 @@ app.post('/api/generate-resume', async (req, res) => {
   }
 });
 
-// IMPORTANT: Export for Vercel Serverless
+// IMPORTANT: Export for Vercel Serverler
+// For Railway deployment
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 export default app;
